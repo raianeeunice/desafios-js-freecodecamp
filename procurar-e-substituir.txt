@@ -1,0 +1,17 @@
+function myReplace(str, before, after) {
+  let newWord = str.split(" ")
+  let index = newWord.indexOf(before)
+
+   if (str[index] === str[index].toUpperCase()) {
+    after = after.charAt(0).toUpperCase() + after.slice(1);
+  } else {
+    after = after.charAt(0).toLowerCase() + after.slice(1);
+  }
+
+  newWord[index] = after
+  console.log(newWord.join(' '))
+  
+  return newWord.join(' ');
+}
+
+myReplace("He is Sleeping on the couch", "Sleeping", "sitting");

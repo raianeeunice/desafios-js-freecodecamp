@@ -1,0 +1,16 @@
+function rot13(str) {
+let newStr = '';
+
+  for (let l of str) {
+    if(l.charCodeAt(0) < "A".charCodeAt(0) || l.charCodeAt(0) > "Z".charCodeAt(0)) {
+      newStr += l
+    } else {
+      let cifra = ((l.charCodeAt(0) - 65 + 13) % 26) + 65
+      let cifraL = String.fromCharCode(cifra)
+      newStr += cifraL
+    }
+}
+  return newStr;
+}
+
+rot13("SERR CVMMN!");
